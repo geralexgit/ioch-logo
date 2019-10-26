@@ -1,0 +1,123 @@
+:root {
+  --logo-container-bg: transparent;
+  --logo-element-bg: #000;
+}
+
+body {
+  position: relative;
+  display: block;
+  font-size: 8px;
+  overflow: hidden;
+}
+
+#animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.Container {
+  display: block;
+  width: 100%;
+  padding-top: 35vh;
+  overflow: hidden;
+}
+
+.LogoContainer {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 25em;
+  height: 25em;
+  background: var(--logo-container-bg);
+  -webkit-animation-name: logo-animation; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 20s; /* Safari 4.0 - 8.0 */
+  animation-name: logo-animation;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.LogoElement {
+  position: absolute;
+  display: block;
+  background-color: var(--logo-element-bg);
+  transition: all .3s;
+  -webkit-animation-name: element-animation; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 20s; /* Safari 4.0 - 8.0 */
+  animation-name: element-animation;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  
+}
+
+.LogoElement-1 {
+  width: 4.2em;
+  height: 2.4em;
+  left: 4.1em;
+  top: 0;
+}
+
+.LogoElement-2 {
+  width: 4.2em;
+  height: 8.5em;
+  left: 4.1em;
+  top: 4em;
+}
+
+.LogoElement-3 {
+  width: 4.2em;
+  height: 4.2em;
+  left: 17em;
+  top: 4.2em;
+}
+
+.LogoElement-4 {
+  width: 8.4em;
+  height: 4.2em;
+  left: 4.1em;
+  top: 16.8em;
+}
+
+.LogoElement-5 {
+  width: 8.2em;
+  height: 4.2em;
+  right: 0;
+  top: 12.6em;
+}
+
+.LogoElement-6 {
+  width: 4.2em;
+  height: 4.2em;
+  bottom: 0;
+  right: 4em;
+}
+
+@keyframes logo-animation {
+  0%   {
+    background: transparent;
+    transform: scale(.1);
+  }
+  50%  {
+    background: #fff;
+    transform: scale(1);}
+  100% {
+    background: transparent;
+    transform: scale(.1);
+  }
+}
+
+/* Standard syntax */
+@keyframes element-animation {
+  0%   {
+    background: rgba(255,255,255, .3);
+    transform: scale(.1);
+  }
+  50%  {
+    background: #000;
+    transform: scale(1);}
+  100% {
+    background: rgba(255,255,255, .3);
+    transform: scale(.1);
+  }
+}
